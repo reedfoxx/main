@@ -15,7 +15,7 @@
             line-height: 1.6;
         }
 
-        /* ----------------------- HEADER ----------------------- */
+        /* ---------------- HEADER ---------------- */
         .header {
             background-color: #FF69B4;
             color: white;
@@ -49,7 +49,7 @@
             background-color: #FF1493;
         }
 
-        /* ----------------------- MAIN CONTENT ----------------------- */
+        /* ---------------- MAIN ---------------- */
         .container {
             width: 95%;
             max-width: 1200px;
@@ -70,8 +70,8 @@
             border-bottom: 3px solid rgba(255, 255, 255, 0.5);
             padding-bottom: 10px;
         }
-        
-        /* ----------------------- COLORS ----------------------- */
+
+        /* ---------------- COLORS ---------------- */
         #home { background-color: #27db27; color: #000000; text-align: center; }
         #games { background-color: #04aff3; color: #050500; }
         #generators { background-color: #ADD8E6; color: #2a3c42; }
@@ -79,7 +79,7 @@
         .telegram-link { color: #FFE4B5; font-weight: bold; }
         .telegram-link:hover { color: #FFD700; }
 
-        /* ----------------------- FOOTER ----------------------- */
+        /* ---------------- FOOTER ---------------- */
         .footer {
             background-color: #FF69B4;
             color: rgb(0, 0, 0);
@@ -89,7 +89,31 @@
             font-size: 0.9em;
         }
 
-        /* ----------------------- MOBILE ----------------------- */
+        /* ---------------- DROPDOWN ---------------- */
+        details {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+            outline: none;
+        }
+
+        details[open] summary {
+            color: #FF1493;
+        }
+
+        details p, details div {
+            margin-top: 10px;
+        }
+
+        /* ---------------- MOBILE ---------------- */
         @media (max-width: 768px) {
             .nav-menu {
                 flex-direction: column;
@@ -99,10 +123,6 @@
             .nav-menu li {
                 margin: 5px 0;
                 border-bottom: 1px solid #FF1493;
-            }
-
-            .nav-menu li:last-child {
-                border-bottom: none;
             }
 
             .nav-link {
@@ -125,7 +145,6 @@
 
     <header class="header">
         <h1>🦊 Мовознайко — вчися граючи!</h1>
-        
         <nav>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Головна</a></li>
@@ -138,39 +157,77 @@
 
     <main class="container">
 
+        <!-- 🏠 ГОЛОВНА -->
         <section id="home" class="content-section">
             <h2>🏠 Головна</h2>
-            <p><strong>Вітаємо у світі Мовознайка!</strong> Тут навчання перетворюється на гру. На сторінках цього сайту ти знайдеш інтерактивні завдання, генератори ігор зі словами та цікаві розвивальні активності.</p>
+            
+            <details open>
+                <summary>Про сайт</summary>
+                <p><strong>Вітаємо у світі Мовознайка!</strong> Тут навчання перетворюється на гру. На сторінках цього сайту ти знайдеш інтерактивні завдання, генератори ігор зі словами та цікаві розвивальні активності.</p>
+            </details>
+
+            <details>
+                <summary>Для кого цей сайт</summary>
+                <p>Сайт створено для учнів початкової школи, педагогів, логопедів і батьків, які хочуть зробити навчання веселим та ефективним.</p>
+            </details>
         </section>
 
+        <!-- 🎮 ІГРИ -->
         <section id="games" class="content-section">
             <h2>🎮 Ігри та завдання</h2>
             <p>Обирай гру, тренуй увагу, мислення та мовлення разом із лисичкою Мовознайком!</p>
 
-            <div style="background-color: #54a806; padding: 15px; margin-top: 10px; border-radius: 10px; color: #663300;">
-                <h3>🧩 Гра “Знайди слово”</h3>
-                <p>Склади слово з розкиданих літер. Чудово розвиває орфографічну пам’ять!</p>
-                <a href="https://reedfoxx.github.io/scramble-letters/" class="telegram-link">Грати зараз &gt;&gt;</a>
-            </div>
+            <details>
+                <summary>🧩 Гра “Знайди слово”</summary>
+                <div style="background-color: #54a806; padding: 15px; margin-top: 10px; border-radius: 10px; color: #663300;">
+                    <p>Склади слово з розкиданих літер. Чудово розвиває орфографічну пам’ять!</p>
+                    <a href="https://reedfoxx.github.io/scramble-letters/" class="telegram-link">Грати зараз &gt;&gt;</a>
+                </div>
+            </details>
 
+            <details>
+                <summary>🎯 Гра “Підбери риму”</summary>
+                <p>Вибери слова, що римуються — тренуй мовне чуття!</p>
+            </details>
+
+            <details>
+                <summary>🧠 Гра “Запам’ятай слова”</summary>
+                <p>Подивись на слова кілька секунд і спробуй пригадати їх усі.</p>
+            </details>
         </section>
 
+        <!-- ⚙️ ГЕНЕРАТОРИ -->
         <section id="generators" class="content-section">
             <h2>⚙️ Онлайн генератори</h2>
-            <p>Автоматично створюй слова, приклади чи вправи! Обери кількість слів або тему — і отримаєш готове завдання для уроку.</p>
+            
+            <details open>
+                <summary>Як це працює</summary>
+                <p>Автоматично створюй слова, приклади чи вправи! Обери кількість слів або тему — і отримаєш готове завдання для уроку.</p>
+            </details>
 
-            <button style="background-color: #FF4500; color: white; padding: 10px 20px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; width: 100%;">Відкрити Генератор</button>
+            <details>
+                <summary>📝 Генератор слів</summary>
+                <button style="background-color: #FF4500; color: white; padding: 10px 20px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; width: 100%;">Відкрити Генератор</button>
+            </details>
         </section>
 
+        <!-- 💬 ТЕЛЕГРАМ -->
         <section id="telegram-nav" class="content-section">
             <h2>💬 Телеграм навігація</h2>
-            <p>Приєднуйся до нашої спільноти у Telegram, щоб отримувати нові завдання, обговорювати ідеї та ділитися власними напрацюваннями!</p>
-            
-            <p style="margin-top: 20px;">
-                🔗 <a href="https://t.me/movoznayko" class="telegram-link" target="_blank">Основний канал Мовознайко</a><br>
-                🔗 <a href="https://t.me/chat_movoznayko" class="telegram-link" target="_blank">Чат спільноти</a><br>
-                🔗 <a href="https://t.me/movoznaiko_tasks" class="telegram-link" target="_blank">Посилання на сторінку з завданнями </a>
-            </p>
+
+            <details open>
+                <summary>Про спільноту</summary>
+                <p>Приєднуйся до нашої спільноти у Telegram, щоб отримувати нові завдання, обговорювати ідеї та ділитися власними напрацюваннями!</p>
+            </details>
+
+            <details>
+                <summary>🔗 Корисні посилання</summary>
+                <p style="margin-top: 10px;">
+                    🔗 <a href="https://t.me/movoznayko" class="telegram-link" target="_blank">Основний канал Мовознайко</a><br>
+                    🔗 <a href="https://t.me/chat_movoznayko" class="telegram-link" target="_blank">Чат спільноти</a><br>
+                    🔗 <a href="https://t.me/movoznaiko_tasks" class="telegram-link" target="_blank">Сторінка із завданнями</a>
+                </p>
+            </details>
         </section>
 
     </main>
@@ -181,4 +238,3 @@
 
 </body>
 </html>
-
