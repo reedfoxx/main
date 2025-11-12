@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мовознайко — Навчальні Ігри та Завдання</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F8FF;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ----------------------- HEADER ----------------------- */
+        .header {
+            background-color: #FF69B4;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu li {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .nav-link:hover {
+            background-color: #FF1493;
+        }
+
+        /* ----------------------- MAIN CONTENT ----------------------- */
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .content-section {
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+            padding-bottom: 10px;
+        }
+        
+        /* ----------------------- COLORS ----------------------- */
+        #home { background-color: #27db27; color: #000000; text-align: center; }
+        #games { background-color: #04aff3; color: #050500; }
+        #generators { background-color: #ADD8E6; color: #2a3c42; }
+        #telegram-nav { background-color: #BA55D3; color: white; }
+        .telegram-link { color: #FFE4B5; font-weight: bold; }
+        .telegram-link:hover { color: #FFD700; }
+
+        /* ----------------------- FOOTER ----------------------- */
+        .footer {
+            background-color: #FF69B4;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        /* ----------------------- MOBILE ----------------------- */
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .nav-menu li {
+                margin: 5px 0;
+                border-bottom: 1px solid #FF1493;
+            }
+
+            .nav-menu li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-link {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .content-section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>🦊 Мовознайко — вчися граючи!</h1>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Головна</a></li>
+                <li><a href="#games" class="nav-link">Ігри та Завдання</a></li>
+                <li><a href="#generators" class="nav-link">Онлайн Генератори</a></li>
+                <li><a href="#telegram-nav" class="nav-link">Телеграм Навігація</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="home" class="content-section">
+            <h2>🏠 Головна</h2>
+            <p><strong>Вітаємо у світі Мовознайка!</strong> Тут навчання перетворюється на гру. На сторінках цього сайту ти знайдеш інтерактивні завдання, генератори ігор зі словами та цікаві розвивальні активності.</p>
+        </section>
+
+        <section id="games" class="content-section">
+            <h2>🎮 Ігри та Завдання</h2>
+            <p>Обирай гру, тренуй увагу, мислення та мовлення разом із лисичкою Мовознайком!</p>
+
+            <div style="background-color: #54a806; padding: 15px; margin-top: 10px; border-radius: 10px; color: #663300;">
+                <h3>🧩 Гра “Знайди слово”</h3>
+                <p>Склади слово з розкиданих літер. Чудово розвиває орфографічну пам’ять!</p>
+                <a href="https://reedfoxx.github.io/scramble-letters/" class="telegram-link">Грати зараз &gt;&gt;</a>
+            </div>
+
+        </section>
+
+        <section id="generators" class="content-section">
+            <h2>⚙️ Онлайн Генератори</h2>
+            <p>Автоматично створюй слова, приклади чи вправи! Обери кількість слів або тему — і отримаєш готове завдання для уроку.</p>
+
+            <button style="background-color: #FF4500; color: white; padding: 10px 20px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; width: 100%;">Відкрити Генератор</button>
+        </section>
+
+        <section id="telegram-nav" class="content-section">
+            <h2>💬 Телеграм Навігація</h2>
+            <p>Приєднуйся до нашої спільноти у Telegram, щоб отримувати нові завдання, обговорювати ідеї та ділитися власними напрацюваннями!</p>
+            
+            <p style="margin-top: 20px;">
+                🔗 <a href="https://t.me/movoznayko" class="telegram-link" target="_blank">Основний канал Мовознайко</a><br>
+                🔗 <a href="https://t.me/chat_movoznayko" class="telegram-link" target="_blank">Чат спільноти</a><br>
+                🔗 <a href="https://t.me/movoznaiko_tasks" class="telegram-link" target="_blank">Посилання на сторінку з завданнями </a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Мовознайко. Вчися з усмішкою 🦊</p>
+    </footer>
+
+</body>
+</html>
